@@ -3,7 +3,9 @@
 # importing cv2
 import cv2
 import numpy 
+
 # Done in large following this: https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html
+
 def main():
     cap = cv2.VideoCapture(0) # GStreamer was unavailable
 

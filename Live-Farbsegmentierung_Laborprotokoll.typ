@@ -115,7 +115,7 @@ cv2.destroyAllWindows()
   tab-size: 8
 ) 
 
-- Konvertiere jedes Frame in den HSV-Farbraum (cv2.cvtColor).
+- Konvertiere jedes Frame in den HSV-Farbraum (cv2.cvtColor). @OpenCV_Tutorial
 #raw(
   "
   hsv = cv2.cvtColor(img, cv2.COLOR_RGB2HSV)
@@ -126,7 +126,7 @@ cv2.destroyAllWindows()
 
 #raw(
   "
-  # Create windows
+    # Create windows
     cv2.namedWindow('HSV')
     cv2.namedWindow('Regler')
 
@@ -169,6 +169,7 @@ cv2.destroyAllWindows()
   ",
   lang: "python"
 )
+#pagebreak()
 - Zeige das Originalbild, die Maske und das gefilterte Ergebnis nebeneinander an.
 #raw(
   "
@@ -178,10 +179,12 @@ cv2.destroyAllWindows()
   ",
   lang: "python"
 )
-
-#image("Live farmsegmentierung/Default.png")
-#image("Live farmsegmentierung/Mask.png")
-#image("Live farmsegmentierung/HSV.png")
+#grid(rows: 2, columns: 2, 
+grid.cell(colspan: 2, align: center, image("Live farmsegmentierung/Default.png", width: 50%, fit: "contain")),
+grid.cell(image("Live farmsegmentierung/HSV.png", width: 100%, fit: "contain")),
+grid.cell(image("Live farmsegmentierung/Mask.png", width: 100%, fit: "contain"))
+)
+#pagebreak()
 - Ein Gaußfilter (cv2.GaussianBlur) vor der Farbsegmentierung kann helfen, Rauschen zu reduzieren
 #raw(
   "
@@ -190,9 +193,10 @@ cv2.destroyAllWindows()
   ",
   lang: "python"
 )
-#image("Live farmsegmentierung/Default.png")
-#image("Live farmsegmentierung/Mask_w_blur.png")
-#image("Live farmsegmentierung/HSV_w_blur.png")
+#grid(rows: 2, columns: 2, 
+grid.cell(colspan: 2, align: center,image("Live farmsegmentierung/Default.png", width: 50%)),
+grid.cell(image("Live farmsegmentierung/HSV_w_Blur.png")),
+grid.cell(image("Live farmsegmentierung/Mask_w_blur.png")))
 = Zusammenfassung
 
 = Literatur
