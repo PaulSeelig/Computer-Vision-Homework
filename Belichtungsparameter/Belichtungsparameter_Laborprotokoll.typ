@@ -48,7 +48,7 @@
 //Deckblatt
 #align(center)[
     
-    #image("HTW_Berlin_Logo.jpg")
+    #image("../HTW_Berlin_Logo.jpg")
     
     #line(length: 100%)
 
@@ -189,25 +189,38 @@ Darauf folgend wurden beide Bilder angezeigt.
   ",
   lang: "python"
 )
-
-#grid()
-#image("Frame_-6.png")
-#image("Motion-Blur-5.png")
-#image("Motion-Blur-30_-6.png")
-
-#image("Frame_-5.png")
-#image("Motion-Blur-5_-5.png")
-#image("Motion-Blur-30_-5.png")
-
-#image("Frame_-7.png")
-#image("Motion-Blur-5_-7.png")
-#image("Motion-Blur-30_-7.png")
+#pagebreak()
 = Zusammenfassung
-
+- Belichtungszeit Wert: -6
+- Motion-Blur: 5 Bild unten Links
+- Motion-Blur: 30 Bild unten Rechts
+#grid(rows: 2, columns: 2, 
+grid.cell(colspan: 2, align: center,image("Frame_-6.png", width: 50%)),
+grid.cell(image("Motion-Blur-5.png")),
+grid.cell(image("Motion-Blur-30_-6.png"))
+)
+#pagebreak()
+- Belichtungszeit Wert: -5
+- Motion-Blur: 5 Bild unten Links
+- Motion-Blur: 30 Bild unten Rechts
+#grid(rows: 2, columns: 2, 
+grid.cell(colspan: 2, align: center,image("Frame_-5.png",width: 50%)),
+grid.cell(image("Motion-Blur-5_-5.png")),
+grid.cell(image("Motion-Blur-30_-5.png"))
+)
+#pagebreak()
+- Belichtungszeit Wert: -7
+- Motion-Blur: 5 Bild unten Links
+- Motion-Blur: 30 Bild unten Rechts
+#grid(rows: 2, columns: 2, 
+grid.cell(colspan: 2, align: center,image("Frame_-7.png", width: 50%)),
+grid.cell(image("Motion-Blur-5_-7.png")),
+grid.cell(image("Motion-Blur-30_-7.png"))
+)
 = Literatur
 
 #bibliography(
   ("Citing.bib"),
   style: "ieee",
   title: none
-) q
+) 
